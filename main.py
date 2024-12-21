@@ -59,12 +59,12 @@ async def main():
     Main program loop that runs indefinitely.
     
     Continuously generates and sends sentences with random intervals
-    between 30 and 600 seconds (0.5 to 10 minutes) to prevent predictable
+    between 30 and 600 seconds (10 to 100 minutes) to prevent predictable
     posting patterns and maintain user engagement.
     """
     while True:
         await send_random_sentence()
-        await asyncio.sleep(random.randint(30, 600))
+        await asyncio.sleep(random.randint(600, 6000))
 
 if __name__ == "__main__":
     # Start the async event loop
