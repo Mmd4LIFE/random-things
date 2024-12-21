@@ -59,7 +59,7 @@ async def main():
     Main program loop that runs indefinitely.
     
     Continuously generates and sends sentences with random intervals
-    between 30 and 600 seconds (10 to 100 minutes) to prevent predictable
+    between 600 and 6000 seconds (10 to 100 minutes) to prevent predictable
     posting patterns and maintain user engagement.
     """
     while True:
