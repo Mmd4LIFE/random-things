@@ -34,10 +34,10 @@ class SentenceGenerator:
             avoiding similarity with the 5 most recent sentences.
         """
         topics = ["technology", "society", "nature", "human behavior", "modern life", 
-                 "relationships", "work", "future", "past", "philosophy"]
+                 "relationships", "work", "future", "past", "philosophy", "science"]
         
         prompt = f"""Generate a single random sentence about {topics[hash(str(self.database.get_all_sentences())) % len(topics)]}. 
-        Make it dark, funny, and unexpected. Keep it under 280 characters. 
+        Make it dark, funny, and unexpected. Keep it under 240 characters. 
         Make it different from these existing sentences: {self.database.get_all_sentences()[-5:]}
         Return only the sentence, nothing else."""
 
